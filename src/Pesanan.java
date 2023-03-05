@@ -4,8 +4,12 @@ public class Pesanan {
     private double totalHarga;
     private Penonton penonton;
     private Tiket tiket;
+
+    // Constructors
     public Pesanan(){}
     public Pesanan(Film film, Studio studio, Penonton penonton, Tiket tiket) {
+        // Mengecek apakah jumlha kursi yang ingin dipesan melebih sisa kursi di studio
+        // Jika ya, lanjut ke constructor, jika tidak, print error.
         if ( tiket.jmlKursiIngin <= studio.getSisaKursi() ){
             studio.bookingKursi(tiket.jmlKursiIngin);
             tiket.harga = studio.hargaTiket;
@@ -18,6 +22,7 @@ public class Pesanan {
             System.out.println("Tidak dapat memesan tiket karena jumlah kursi tidak tersedia.\n");
         }
     }
+    // Meng-override method .toString() bawaan untuk print pesan custom
     @Override
     public String toString() {
         return "+++++++++++++++ Pesanan +++++++++++++++\n"+

@@ -36,9 +36,9 @@ public class Main {
         System.out.println(pesanan2);
 
 
+        Pesanan pesanan3 = new Pesanan(film2, studio2, penonton3, tiket3);
         // Pesanan3 akan menghasilkan output "Tidak dapat menambah tiket..."
         // Hal ini karena kursi yang diinginkan (11) melebihi kapasitas kursi di studio2 (10)
-        Pesanan pesanan3 = new Pesanan(film2, studio2, penonton3, tiket3);
 
         // Mengurangi kursi yang ingin di pesan, lalu membuat pesanan baru dan print
         tiket3.jmlKursiIngin -= 1;
